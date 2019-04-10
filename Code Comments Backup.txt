@@ -1,0 +1,41 @@
+----------- WCF - BackDays -----------------
+ 
+       'Select Case Resultado.DayOfWeek
+        '    Case DayOfWeek.Friday Or DayOfWeek.Saturday 'viernes
+        '        'Ir a lunes anterior
+        '        DiaSemana = 1
+        '    Case DayOfWeek.Monday 'Lunes
+        '        Resultado = Resultado.AddDays(-1)
+        '        DiaSemana = 1
+        '    Case DayOfWeek.Sunday 'Domingo
+
+        '        DiaSemana = 1
+        '    Case DayOfWeek.Thursday 'Jueves
+        '        DiaSemana = 4
+        '    Case DayOfWeek.Tuesday Or DayOfWeek.Wednesday 'Martes
+        '        'Ir a jueves anterior
+        '        Resultado = Resultado.AddDays(-1)
+        '        DiaSemana = 4
+
+        'End Select
+
+        'While Resultado.DayOfWeek <> DiaSemana
+        '    Resultado = Resultado.AddDays(-1)
+        'End While
+
+        'If Resultado.DayOfWeek = DayOfWeek.Sunday Then
+        '    Resultado = Resultado.AddDays(+1)
+        'End If
+
+        'Resultado = Resultado.AddDays(-5)
+
+        'If NomFracc Like "*LORETO*" Or NomFracc Like "*BARCELO*" Then
+        '    While (Resultado.DayOfWeek <> DayOfWeek.Monday)
+        '        Resultado = Resultado.AddDays(-1)
+        '    End While
+        'End If
+        'If NomFracc Like "*DORADA*" Or NomFracc Like "*PALERMO*" Then
+        '    While (Resultado.DayOfWeek <> DayOfWeek.Thursday)
+        '        Resultado = Resultado.AddDays(-1)
+        '    End While
+        'End If

@@ -1,0 +1,1904 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.1.17/WCF-ProConsul2/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.1.17/WCF-ProConsul2/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.1.17/WCF-ProConsul2/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" />
+      <xsd:import schemaLocation="http://192.168.1.17/WCF-ProConsul2/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://192.168.1.17/WCF-ProConsul2/Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://192.168.1.17/WCF-ProConsul2/Service1.svc?xsd=xsd5" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_LogIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogIn" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LogIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogInResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Estado_de_Cuenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Estado_de_Cuenta" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Estado_de_Cuenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Estado_de_CuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_reporte_semanal_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_reporte_semanal" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_reporte_semanal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_reporte_semanalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_datos_nom_fracc_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_datos_nom_fracc" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_datos_nom_fracc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_datos_nom_fraccResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Smza_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Smza" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Smza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_SmzaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Tipos_de_Credito_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Tipos_de_Credito" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Tipos_de_Credito_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Tipos_de_CreditoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Tipos_de_CreditoCC_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Tipos_de_CreditoCC" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Tipos_de_CreditoCC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Tipos_de_CreditoCCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Datos_Contrato_Nuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Datos_Contrato_Nuevo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Datos_Contrato_Nuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Datos_Contrato_NuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Verifica_Conectividad_InputMessage">
+    <wsdl:part name="parameters" element="tns:Verifica_Conectividad" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Verifica_Conectividad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Verifica_ConectividadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Ventas_Por_Semana_Entre_Fechas_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Ventas_Por_Semana_Entre_Fechas" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Ventas_Por_Semana_Entre_Fechas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Ventas_Por_Semana_Entre_FechasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Total_Vendido_Ubicado_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Total_Vendido_Ubicado" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Total_Vendido_Ubicado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Total_Vendido_UbicadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Total_habitabilidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Total_habitabilidad" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Total_habitabilidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Total_habitabilidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Habitabilidad_Por_Semana_Entre_Fechas_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Habitabilidad_Por_Semana_Entre_Fechas" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Habitabilidad_Por_Semana_Entre_Fechas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Habitabilidad_Por_Semana_Entre_FechasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Ventas_Por_Semana_Entre_Fechas_Barras_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Ventas_Por_Semana_Entre_Fechas_Barras" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Ventas_Por_Semana_Entre_Fechas_Barras_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Ventas_Por_Semana_Entre_Fechas_BarrasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Firmas_X_Semana_Entre_Fechas_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Firmas_X_Semana_Entre_Fechas" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Firmas_X_Semana_Entre_Fechas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Firmas_X_Semana_Entre_FechasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Total_Cancelados_o_SinUbicacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Total_Cancelados_o_SinUbicacion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Total_Cancelados_o_SinUbicacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Total_Cancelados_o_SinUbicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MyDatos_InputMessage">
+    <wsdl:part name="parameters" element="tns:MyDatos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MyDatos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MyDatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_DatosDetalle_Empleado_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_DatosDetalle_Empleado" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_DatosDetalle_Empleado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_DatosDetalle_EmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Comprobar_Notificaciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:Comprobar_Notificaciones" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Comprobar_Notificaciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Comprobar_NotificacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Cambiar_a_Visto_notificacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:Cambiar_a_Visto_notificacion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Cambiar_a_Visto_notificacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Cambiar_a_Visto_notificacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Clientes_Activos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Clientes_Activos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Clientes_Activos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Clientes_ActivosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_ultimas_Notificaciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_ultimas_Notificaciones" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_ultimas_Notificaciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_ultimas_NotificacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Asesores_Activos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Asesores_Activos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Asesores_Activos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Asesores_ActivosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Reporte_Concepto_Total_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_Concepto_Total" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Reporte_Concepto_Total_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_Concepto_TotalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Reporte_concepto_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Reporte_concepto" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Reporte_concepto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Reporte_conceptoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_buscarClienteAutoCompletar_InputMessage">
+    <wsdl:part name="parameters" element="tns:buscarClienteAutoCompletar" />
+  </wsdl:message>
+  <wsdl:message name="IService1_buscarClienteAutoCompletar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:buscarClienteAutoCompletarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Datos_Generales_Cliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Datos_Generales_Cliente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Datos_Generales_Cliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Datos_Generales_ClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Desgloce_Etapas_Cliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Desgloce_Etapas_Cliente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Desgloce_Etapas_Cliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Desgloce_Etapas_ClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CancelacionCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelacionCliente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CancelacionCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelacionClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserta_usuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:Inserta_usuarios" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserta_usuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Inserta_usuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserta_pro_contratos_nuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Inserta_pro_contratos_nuevo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserta_pro_contratos_nuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Inserta_pro_contratos_nuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Actualiza_pro_contratos_nuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualiza_pro_contratos_nuevo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Actualiza_pro_contratos_nuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualiza_pro_contratos_nuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Listar_ContratoDatos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listar_ContratoDatos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Listar_ContratoDatos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listar_ContratoDatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Elimina_pro_contratos_nuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Elimina_pro_contratos_nuevo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Elimina_pro_contratos_nuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Elimina_pro_contratos_nuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserta_promociones_InputMessage">
+    <wsdl:part name="parameters" element="tns:Inserta_promociones" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserta_promociones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Inserta_promocionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Actualiza_promociones_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualiza_promociones" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Actualiza_promociones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualiza_promocionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Elimina_promociones_InputMessage">
+    <wsdl:part name="parameters" element="tns:Elimina_promociones" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Elimina_promociones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Elimina_promocionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Listar_Equipamientos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listar_Equipamientos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Listar_Equipamientos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listar_EquipamientosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Equipamientos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Equipamientos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Equipamientos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_EquipamientosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Equipamiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Equipamiento" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Equipamiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_EquipamientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Datos_Grid_Gerardo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Datos_Grid_Gerardo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Datos_Grid_Gerardo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Datos_Grid_GerardoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Detalles_comisionID_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Detalles_comisionID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Detalles_comisionID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Detalles_comisionIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Modifica_Comision_InputMessage">
+    <wsdl:part name="parameters" element="tns:Modifica_Comision" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Modifica_Comision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Modifica_ComisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Nombrecompleto_lider_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Nombrecompleto_lider" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Nombrecompleto_lider_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Nombrecompleto_liderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Resumen_fraccionamiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:Resumen_fraccionamiento" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Resumen_fraccionamiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Resumen_fraccionamientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Resumen_asesor_comisiones_InputMessage">
+    <wsdl:part name="parameters" element="tns:Resumen_asesor_comisiones" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Resumen_asesor_comisiones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Resumen_asesor_comisionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_pro_contratos_nuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_pro_contratos_nuevo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_pro_contratos_nuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_pro_contratos_nuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Valores_Comisiones_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Valores_Comisiones" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Valores_Comisiones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Valores_ComisionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Actualiza_comisiones_porcentajes_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualiza_comisiones_porcentajes" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Actualiza_comisiones_porcentajes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualiza_comisiones_porcentajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_comisiones_porcentajes_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_comisiones_porcentajes" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_comisiones_porcentajes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_comisiones_porcentajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_esquemas_enkontrol_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_esquemas_enkontrol" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_esquemas_enkontrol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_esquemas_enkontrolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserta_comisiones_clasificaciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:Inserta_comisiones_clasificaciones" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserta_comisiones_clasificaciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Inserta_comisiones_clasificacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Elimina_comisiones_clasificaciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:Elimina_comisiones_clasificaciones" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Elimina_comisiones_clasificaciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Elimina_comisiones_clasificacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Actualiza_comisiones_clasificaciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualiza_comisiones_clasificaciones" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Actualiza_comisiones_clasificaciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualiza_comisiones_clasificacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_comisiones_clasificaciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_comisiones_clasificaciones" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_comisiones_clasificaciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_comisiones_clasificacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_comisiones_clasificacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_comisiones_clasificacion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_comisiones_clasificacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_comisiones_clasificacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserta_comisiones_esquemas_InputMessage">
+    <wsdl:part name="parameters" element="tns:Inserta_comisiones_esquemas" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserta_comisiones_esquemas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Inserta_comisiones_esquemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Elimina_comisiones_esquemas_InputMessage">
+    <wsdl:part name="parameters" element="tns:Elimina_comisiones_esquemas" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Elimina_comisiones_esquemas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Elimina_comisiones_esquemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_comisiones_esquemas_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_comisiones_esquemas" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_comisiones_esquemas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_comisiones_esquemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_comisiones_esquema_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_comisiones_esquema" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_comisiones_esquema_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_comisiones_esquemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Reglas_Comisiones_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Reglas_Comisiones" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Reglas_Comisiones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Reglas_ComisionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserta_comisiones_reglas_InputMessage">
+    <wsdl:part name="parameters" element="tns:Inserta_comisiones_reglas" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserta_comisiones_reglas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Inserta_comisiones_reglasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Elimina_comisiones_reglas_InputMessage">
+    <wsdl:part name="parameters" element="tns:Elimina_comisiones_reglas" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Elimina_comisiones_reglas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Elimina_comisiones_reglasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Actualiza_admin_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualiza_admin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Actualiza_admin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualiza_adminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_admin_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_admin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_admin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_adminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserta_programacionentrega_InputMessage">
+    <wsdl:part name="parameters" element="tns:Inserta_programacionentrega" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserta_programacionentrega_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Inserta_programacionentregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Elimina_programacionentrega_InputMessage">
+    <wsdl:part name="parameters" element="tns:Elimina_programacionentrega" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Elimina_programacionentrega_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Elimina_programacionentregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Actualiza_programacionentrega_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualiza_programacionentrega" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Actualiza_programacionentrega_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualiza_programacionentregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_programacionentrega_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_programacionentrega" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_programacionentrega_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_programacionentregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Nombre_Cliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Nombre_Cliente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Nombre_Cliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Nombre_ClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Cambia_contratos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Cambia_contratos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Cambia_contratos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Cambia_contratosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserta_comisionesgerencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:Inserta_comisionesgerencia" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserta_comisionesgerencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Inserta_comisionesgerenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Elimina_comisionesgerencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:Elimina_comisionesgerencia" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Elimina_comisionesgerencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Elimina_comisionesgerenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Elimina_Comision_InputMessage">
+    <wsdl:part name="parameters" element="tns:Elimina_Comision" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Elimina_Comision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Elimina_ComisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_comisionesgerencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_comisionesgerencia" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_comisionesgerencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_comisionesgerenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_promocione_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_promocione" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_promocione_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_promocioneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Reporte_Penalizacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_Penalizacion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Reporte_Penalizacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_PenalizacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_comisiones_cliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_comisiones_cliente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_comisiones_cliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_comisiones_clienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_datos_cancelaciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_datos_cancelaciones" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_datos_cancelaciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_datos_cancelacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_programacionEntregaAdm_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_programacionEntregaAdm" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_programacionEntregaAdm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_programacionEntregaAdmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_datos_cliente_contrato_fovissste_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_datos_cliente_contrato_fovissste" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_datos_cliente_contrato_fovissste_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_datos_cliente_contrato_fovisssteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_cuentaDepodito_Cte_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_cuentaDepodito_Cte" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_cuentaDepodito_Cte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_cuentaDepodito_CteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Credito_Porcentaje_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Credito_Porcentaje" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Credito_Porcentaje_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Credito_PorcentajeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_promociones_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_promociones" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_promociones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_promocionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerDSEnkontrol_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDSEnkontrol" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerDSEnkontrol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDSEnkontrolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_loteids_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_loteids" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_loteids_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_loteidsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerDSSAC_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDSSAC" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerDSSAC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDSSACResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserta_reportes_check_InputMessage">
+    <wsdl:part name="parameters" element="tns:Inserta_reportes_check" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserta_reportes_check_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Inserta_reportes_checkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTerreno_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTerreno" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTerreno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTerrenoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_plazosTerrenos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_plazosTerrenos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_plazosTerrenos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_plazosTerrenosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_plazoTerreno_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_plazoTerreno" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_plazoTerreno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_plazoTerrenoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerPCRU_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPCRU" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerPCRU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPCRUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_limite_bonoContrato_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_limite_bonoContrato" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_limite_bonoContrato_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_limite_bonoContratoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_HabitabilidadLM_BI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_HabitabilidadLM_BI" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_HabitabilidadLM_BI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_HabitabilidadLM_BIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_CanceladosLM_BI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CanceladosLM_BI" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_CanceladosLM_BI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_CanceladosLM_BIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_EscrituradosLM_BI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_EscrituradosLM_BI" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_EscrituradosLM_BI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_EscrituradosLM_BIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_VentasLM_BI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VentasLM_BI" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_VentasLM_BI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_VentasLM_BIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_EscrituradosAcumuladoLM_BI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_EscrituradosAcumuladoLM_BI" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_EscrituradosAcumuladoLM_BI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_EscrituradosAcumuladoLM_BIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Ingresados_por_semana_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Ingresados_por_semana" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Obtener_Ingresados_por_semana_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Ingresados_por_semanaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="LogIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/LogIn" message="tns:IService1_LogIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LogInResponse" message="tns:IService1_LogIn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Estado_de_Cuenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Estado_de_Cuenta" message="tns:IService1_Obtener_Estado_de_Cuenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Estado_de_CuentaResponse" message="tns:IService1_Obtener_Estado_de_Cuenta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_reporte_semanal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_reporte_semanal" message="tns:IService1_Obtener_reporte_semanal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_reporte_semanalResponse" message="tns:IService1_Obtener_reporte_semanal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_datos_nom_fracc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_datos_nom_fracc" message="tns:IService1_Obtener_datos_nom_fracc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_datos_nom_fraccResponse" message="tns:IService1_Obtener_datos_nom_fracc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Smza">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Smza" message="tns:IService1_Obtener_Smza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_SmzaResponse" message="tns:IService1_Obtener_Smza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Tipos_de_Credito">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Tipos_de_Credito" message="tns:IService1_Obtener_Tipos_de_Credito_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Tipos_de_CreditoResponse" message="tns:IService1_Obtener_Tipos_de_Credito_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Tipos_de_CreditoCC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Tipos_de_CreditoCC" message="tns:IService1_Obtener_Tipos_de_CreditoCC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Tipos_de_CreditoCCResponse" message="tns:IService1_Obtener_Tipos_de_CreditoCC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Datos_Contrato_Nuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Datos_Contrato_Nuevo" message="tns:IService1_Obtener_Datos_Contrato_Nuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Datos_Contrato_NuevoResponse" message="tns:IService1_Obtener_Datos_Contrato_Nuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Verifica_Conectividad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Verifica_Conectividad" message="tns:IService1_Verifica_Conectividad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Verifica_ConectividadResponse" message="tns:IService1_Verifica_Conectividad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Ventas_Por_Semana_Entre_Fechas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Ventas_Por_Semana_Entre_Fechas" message="tns:IService1_Obtener_Ventas_Por_Semana_Entre_Fechas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Ventas_Por_Semana_Entre_FechasResponse" message="tns:IService1_Obtener_Ventas_Por_Semana_Entre_Fechas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Total_Vendido_Ubicado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Total_Vendido_Ubicado" message="tns:IService1_Obtener_Total_Vendido_Ubicado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Total_Vendido_UbicadoResponse" message="tns:IService1_Obtener_Total_Vendido_Ubicado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Total_habitabilidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Total_habitabilidad" message="tns:IService1_Obtener_Total_habitabilidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Total_habitabilidadResponse" message="tns:IService1_Obtener_Total_habitabilidad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Habitabilidad_Por_Semana_Entre_Fechas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Habitabilidad_Por_Semana_Entre_Fechas" message="tns:IService1_Obtener_Habitabilidad_Por_Semana_Entre_Fechas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Habitabilidad_Por_Semana_Entre_FechasResponse" message="tns:IService1_Obtener_Habitabilidad_Por_Semana_Entre_Fechas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Ventas_Por_Semana_Entre_Fechas_Barras">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Ventas_Por_Semana_Entre_Fechas_Barras" message="tns:IService1_Obtener_Ventas_Por_Semana_Entre_Fechas_Barras_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Ventas_Por_Semana_Entre_Fechas_BarrasResponse" message="tns:IService1_Obtener_Ventas_Por_Semana_Entre_Fechas_Barras_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Firmas_X_Semana_Entre_Fechas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Firmas_X_Semana_Entre_Fechas" message="tns:IService1_Obtener_Firmas_X_Semana_Entre_Fechas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Firmas_X_Semana_Entre_FechasResponse" message="tns:IService1_Obtener_Firmas_X_Semana_Entre_Fechas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Total_Cancelados_o_SinUbicacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Total_Cancelados_o_SinUbicacion" message="tns:IService1_Obtener_Total_Cancelados_o_SinUbicacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Total_Cancelados_o_SinUbicacionResponse" message="tns:IService1_Obtener_Total_Cancelados_o_SinUbicacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MyDatos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/MyDatos" message="tns:IService1_MyDatos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/MyDatosResponse" message="tns:IService1_MyDatos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_DatosDetalle_Empleado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_DatosDetalle_Empleado" message="tns:IService1_Obtener_DatosDetalle_Empleado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_DatosDetalle_EmpleadoResponse" message="tns:IService1_Obtener_DatosDetalle_Empleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Comprobar_Notificaciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Comprobar_Notificaciones" message="tns:IService1_Comprobar_Notificaciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Comprobar_NotificacionesResponse" message="tns:IService1_Comprobar_Notificaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Cambiar_a_Visto_notificacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Cambiar_a_Visto_notificacion" message="tns:IService1_Cambiar_a_Visto_notificacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Cambiar_a_Visto_notificacionResponse" message="tns:IService1_Cambiar_a_Visto_notificacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Clientes_Activos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Clientes_Activos" message="tns:IService1_Obtener_Clientes_Activos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Clientes_ActivosResponse" message="tns:IService1_Obtener_Clientes_Activos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_ultimas_Notificaciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_ultimas_Notificaciones" message="tns:IService1_Obtener_ultimas_Notificaciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_ultimas_NotificacionesResponse" message="tns:IService1_Obtener_ultimas_Notificaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Asesores_Activos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Asesores_Activos" message="tns:IService1_Obtener_Asesores_Activos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Asesores_ActivosResponse" message="tns:IService1_Obtener_Asesores_Activos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_Concepto_Total">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Reporte_Concepto_Total" message="tns:IService1_Reporte_Concepto_Total_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Reporte_Concepto_TotalResponse" message="tns:IService1_Reporte_Concepto_Total_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Reporte_concepto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Reporte_concepto" message="tns:IService1_Obtener_Reporte_concepto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Reporte_conceptoResponse" message="tns:IService1_Obtener_Reporte_concepto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="buscarClienteAutoCompletar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/buscarClienteAutoCompletar" message="tns:IService1_buscarClienteAutoCompletar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/buscarClienteAutoCompletarResponse" message="tns:IService1_buscarClienteAutoCompletar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Datos_Generales_Cliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Datos_Generales_Cliente" message="tns:IService1_Obtener_Datos_Generales_Cliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Datos_Generales_ClienteResponse" message="tns:IService1_Obtener_Datos_Generales_Cliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Desgloce_Etapas_Cliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Desgloce_Etapas_Cliente" message="tns:IService1_Obtener_Desgloce_Etapas_Cliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Desgloce_Etapas_ClienteResponse" message="tns:IService1_Obtener_Desgloce_Etapas_Cliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelacionCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CancelacionCliente" message="tns:IService1_CancelacionCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CancelacionClienteResponse" message="tns:IService1_CancelacionCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_usuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Inserta_usuarios" message="tns:IService1_Inserta_usuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Inserta_usuariosResponse" message="tns:IService1_Inserta_usuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_pro_contratos_nuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Inserta_pro_contratos_nuevo" message="tns:IService1_Inserta_pro_contratos_nuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Inserta_pro_contratos_nuevoResponse" message="tns:IService1_Inserta_pro_contratos_nuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_pro_contratos_nuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Actualiza_pro_contratos_nuevo" message="tns:IService1_Actualiza_pro_contratos_nuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Actualiza_pro_contratos_nuevoResponse" message="tns:IService1_Actualiza_pro_contratos_nuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listar_ContratoDatos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Listar_ContratoDatos" message="tns:IService1_Listar_ContratoDatos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Listar_ContratoDatosResponse" message="tns:IService1_Listar_ContratoDatos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Elimina_pro_contratos_nuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Elimina_pro_contratos_nuevo" message="tns:IService1_Elimina_pro_contratos_nuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Elimina_pro_contratos_nuevoResponse" message="tns:IService1_Elimina_pro_contratos_nuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_promociones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Inserta_promociones" message="tns:IService1_Inserta_promociones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Inserta_promocionesResponse" message="tns:IService1_Inserta_promociones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_promociones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Actualiza_promociones" message="tns:IService1_Actualiza_promociones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Actualiza_promocionesResponse" message="tns:IService1_Actualiza_promociones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Elimina_promociones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Elimina_promociones" message="tns:IService1_Elimina_promociones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Elimina_promocionesResponse" message="tns:IService1_Elimina_promociones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listar_Equipamientos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Listar_Equipamientos" message="tns:IService1_Listar_Equipamientos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Listar_EquipamientosResponse" message="tns:IService1_Listar_Equipamientos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Equipamientos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Equipamientos" message="tns:IService1_Obtener_Equipamientos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_EquipamientosResponse" message="tns:IService1_Obtener_Equipamientos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Equipamiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Equipamiento" message="tns:IService1_Obtener_Equipamiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_EquipamientoResponse" message="tns:IService1_Obtener_Equipamiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Datos_Grid_Gerardo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Datos_Grid_Gerardo" message="tns:IService1_Obtener_Datos_Grid_Gerardo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Datos_Grid_GerardoResponse" message="tns:IService1_Obtener_Datos_Grid_Gerardo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Detalles_comisionID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Detalles_comisionID" message="tns:IService1_Obtener_Detalles_comisionID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Detalles_comisionIDResponse" message="tns:IService1_Obtener_Detalles_comisionID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Modifica_Comision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Modifica_Comision" message="tns:IService1_Modifica_Comision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Modifica_ComisionResponse" message="tns:IService1_Modifica_Comision_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Nombrecompleto_lider">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Nombrecompleto_lider" message="tns:IService1_Obtener_Nombrecompleto_lider_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Nombrecompleto_liderResponse" message="tns:IService1_Obtener_Nombrecompleto_lider_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Resumen_fraccionamiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Resumen_fraccionamiento" message="tns:IService1_Resumen_fraccionamiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Resumen_fraccionamientoResponse" message="tns:IService1_Resumen_fraccionamiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Resumen_asesor_comisiones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Resumen_asesor_comisiones" message="tns:IService1_Resumen_asesor_comisiones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Resumen_asesor_comisionesResponse" message="tns:IService1_Resumen_asesor_comisiones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_pro_contratos_nuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_pro_contratos_nuevo" message="tns:IService1_Obtener_pro_contratos_nuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_pro_contratos_nuevoResponse" message="tns:IService1_Obtener_pro_contratos_nuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Valores_Comisiones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Valores_Comisiones" message="tns:IService1_Obtener_Valores_Comisiones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Valores_ComisionesResponse" message="tns:IService1_Obtener_Valores_Comisiones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_comisiones_porcentajes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Actualiza_comisiones_porcentajes" message="tns:IService1_Actualiza_comisiones_porcentajes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Actualiza_comisiones_porcentajesResponse" message="tns:IService1_Actualiza_comisiones_porcentajes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_comisiones_porcentajes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_comisiones_porcentajes" message="tns:IService1_Obtener_comisiones_porcentajes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_comisiones_porcentajesResponse" message="tns:IService1_Obtener_comisiones_porcentajes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_esquemas_enkontrol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_esquemas_enkontrol" message="tns:IService1_Obtener_esquemas_enkontrol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_esquemas_enkontrolResponse" message="tns:IService1_Obtener_esquemas_enkontrol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_comisiones_clasificaciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Inserta_comisiones_clasificaciones" message="tns:IService1_Inserta_comisiones_clasificaciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Inserta_comisiones_clasificacionesResponse" message="tns:IService1_Inserta_comisiones_clasificaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Elimina_comisiones_clasificaciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Elimina_comisiones_clasificaciones" message="tns:IService1_Elimina_comisiones_clasificaciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Elimina_comisiones_clasificacionesResponse" message="tns:IService1_Elimina_comisiones_clasificaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_comisiones_clasificaciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Actualiza_comisiones_clasificaciones" message="tns:IService1_Actualiza_comisiones_clasificaciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Actualiza_comisiones_clasificacionesResponse" message="tns:IService1_Actualiza_comisiones_clasificaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_comisiones_clasificaciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_comisiones_clasificaciones" message="tns:IService1_Obtener_comisiones_clasificaciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_comisiones_clasificacionesResponse" message="tns:IService1_Obtener_comisiones_clasificaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_comisiones_clasificacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_comisiones_clasificacion" message="tns:IService1_Obtener_comisiones_clasificacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_comisiones_clasificacionResponse" message="tns:IService1_Obtener_comisiones_clasificacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_comisiones_esquemas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Inserta_comisiones_esquemas" message="tns:IService1_Inserta_comisiones_esquemas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Inserta_comisiones_esquemasResponse" message="tns:IService1_Inserta_comisiones_esquemas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Elimina_comisiones_esquemas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Elimina_comisiones_esquemas" message="tns:IService1_Elimina_comisiones_esquemas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Elimina_comisiones_esquemasResponse" message="tns:IService1_Elimina_comisiones_esquemas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_comisiones_esquemas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_comisiones_esquemas" message="tns:IService1_Obtener_comisiones_esquemas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_comisiones_esquemasResponse" message="tns:IService1_Obtener_comisiones_esquemas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_comisiones_esquema">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_comisiones_esquema" message="tns:IService1_Obtener_comisiones_esquema_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_comisiones_esquemaResponse" message="tns:IService1_Obtener_comisiones_esquema_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Reglas_Comisiones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Reglas_Comisiones" message="tns:IService1_Obtener_Reglas_Comisiones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Reglas_ComisionesResponse" message="tns:IService1_Obtener_Reglas_Comisiones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_comisiones_reglas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Inserta_comisiones_reglas" message="tns:IService1_Inserta_comisiones_reglas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Inserta_comisiones_reglasResponse" message="tns:IService1_Inserta_comisiones_reglas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Elimina_comisiones_reglas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Elimina_comisiones_reglas" message="tns:IService1_Elimina_comisiones_reglas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Elimina_comisiones_reglasResponse" message="tns:IService1_Elimina_comisiones_reglas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_admin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Actualiza_admin" message="tns:IService1_Actualiza_admin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Actualiza_adminResponse" message="tns:IService1_Actualiza_admin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_admin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_admin" message="tns:IService1_Obtener_admin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_adminResponse" message="tns:IService1_Obtener_admin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_programacionentrega">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Inserta_programacionentrega" message="tns:IService1_Inserta_programacionentrega_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Inserta_programacionentregaResponse" message="tns:IService1_Inserta_programacionentrega_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Elimina_programacionentrega">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Elimina_programacionentrega" message="tns:IService1_Elimina_programacionentrega_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Elimina_programacionentregaResponse" message="tns:IService1_Elimina_programacionentrega_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_programacionentrega">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Actualiza_programacionentrega" message="tns:IService1_Actualiza_programacionentrega_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Actualiza_programacionentregaResponse" message="tns:IService1_Actualiza_programacionentrega_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_programacionentrega">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_programacionentrega" message="tns:IService1_Obtener_programacionentrega_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_programacionentregaResponse" message="tns:IService1_Obtener_programacionentrega_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Nombre_Cliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Nombre_Cliente" message="tns:IService1_Obtener_Nombre_Cliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Nombre_ClienteResponse" message="tns:IService1_Obtener_Nombre_Cliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Cambia_contratos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Cambia_contratos" message="tns:IService1_Cambia_contratos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Cambia_contratosResponse" message="tns:IService1_Cambia_contratos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_comisionesgerencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Inserta_comisionesgerencia" message="tns:IService1_Inserta_comisionesgerencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Inserta_comisionesgerenciaResponse" message="tns:IService1_Inserta_comisionesgerencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Elimina_comisionesgerencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Elimina_comisionesgerencia" message="tns:IService1_Elimina_comisionesgerencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Elimina_comisionesgerenciaResponse" message="tns:IService1_Elimina_comisionesgerencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Elimina_Comision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Elimina_Comision" message="tns:IService1_Elimina_Comision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Elimina_ComisionResponse" message="tns:IService1_Elimina_Comision_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_comisionesgerencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_comisionesgerencia" message="tns:IService1_Obtener_comisionesgerencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_comisionesgerenciaResponse" message="tns:IService1_Obtener_comisionesgerencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_promocione">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_promocione" message="tns:IService1_Obtener_promocione_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_promocioneResponse" message="tns:IService1_Obtener_promocione_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_Penalizacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Reporte_Penalizacion" message="tns:IService1_Reporte_Penalizacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Reporte_PenalizacionResponse" message="tns:IService1_Reporte_Penalizacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_comisiones_cliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_comisiones_cliente" message="tns:IService1_Obtener_comisiones_cliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_comisiones_clienteResponse" message="tns:IService1_Obtener_comisiones_cliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_datos_cancelaciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_datos_cancelaciones" message="tns:IService1_Obtener_datos_cancelaciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_datos_cancelacionesResponse" message="tns:IService1_Obtener_datos_cancelaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_programacionEntregaAdm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_programacionEntregaAdm" message="tns:IService1_Obtener_programacionEntregaAdm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_programacionEntregaAdmResponse" message="tns:IService1_Obtener_programacionEntregaAdm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_datos_cliente_contrato_fovissste">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_datos_cliente_contrato_fovissste" message="tns:IService1_Obtener_datos_cliente_contrato_fovissste_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_datos_cliente_contrato_fovisssteResponse" message="tns:IService1_Obtener_datos_cliente_contrato_fovissste_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_cuentaDepodito_Cte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_cuentaDepodito_Cte" message="tns:IService1_Obtener_cuentaDepodito_Cte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_cuentaDepodito_CteResponse" message="tns:IService1_Obtener_cuentaDepodito_Cte_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Credito_Porcentaje">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Credito_Porcentaje" message="tns:IService1_Obtener_Credito_Porcentaje_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Credito_PorcentajeResponse" message="tns:IService1_Obtener_Credito_Porcentaje_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_promociones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_promociones" message="tns:IService1_Obtener_promociones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_promocionesResponse" message="tns:IService1_Obtener_promociones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDSEnkontrol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerDSEnkontrol" message="tns:IService1_ObtenerDSEnkontrol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerDSEnkontrolResponse" message="tns:IService1_ObtenerDSEnkontrol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_loteids">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_loteids" message="tns:IService1_Obtener_loteids_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_loteidsResponse" message="tns:IService1_Obtener_loteids_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDSSAC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerDSSAC" message="tns:IService1_ObtenerDSSAC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerDSSACResponse" message="tns:IService1_ObtenerDSSAC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_reportes_check">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Inserta_reportes_check" message="tns:IService1_Inserta_reportes_check_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Inserta_reportes_checkResponse" message="tns:IService1_Inserta_reportes_check_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTerreno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerTerreno" message="tns:IService1_ObtenerTerreno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerTerrenoResponse" message="tns:IService1_ObtenerTerreno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_plazosTerrenos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_plazosTerrenos" message="tns:IService1_Obtener_plazosTerrenos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_plazosTerrenosResponse" message="tns:IService1_Obtener_plazosTerrenos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_plazoTerreno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_plazoTerreno" message="tns:IService1_Obtener_plazoTerreno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_plazoTerrenoResponse" message="tns:IService1_Obtener_plazoTerreno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPCRU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerPCRU" message="tns:IService1_ObtenerPCRU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerPCRUResponse" message="tns:IService1_ObtenerPCRU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_limite_bonoContrato">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_limite_bonoContrato" message="tns:IService1_Obtener_limite_bonoContrato_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_limite_bonoContratoResponse" message="tns:IService1_Obtener_limite_bonoContrato_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_HabitabilidadLM_BI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_HabitabilidadLM_BI" message="tns:IService1_Obtener_HabitabilidadLM_BI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_HabitabilidadLM_BIResponse" message="tns:IService1_Obtener_HabitabilidadLM_BI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CanceladosLM_BI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_CanceladosLM_BI" message="tns:IService1_Obtener_CanceladosLM_BI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_CanceladosLM_BIResponse" message="tns:IService1_Obtener_CanceladosLM_BI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_EscrituradosLM_BI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_EscrituradosLM_BI" message="tns:IService1_Obtener_EscrituradosLM_BI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_EscrituradosLM_BIResponse" message="tns:IService1_Obtener_EscrituradosLM_BI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VentasLM_BI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_VentasLM_BI" message="tns:IService1_Obtener_VentasLM_BI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_VentasLM_BIResponse" message="tns:IService1_Obtener_VentasLM_BI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_EscrituradosAcumuladoLM_BI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_EscrituradosAcumuladoLM_BI" message="tns:IService1_Obtener_EscrituradosAcumuladoLM_BI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_EscrituradosAcumuladoLM_BIResponse" message="tns:IService1_Obtener_EscrituradosAcumuladoLM_BI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Ingresados_por_semana">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Obtener_Ingresados_por_semana" message="tns:IService1_Obtener_Ingresados_por_semana_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Obtener_Ingresados_por_semanaResponse" message="tns:IService1_Obtener_Ingresados_por_semana_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LogIn">
+      <soap:operation soapAction="http://tempuri.org/IService1/LogIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Estado_de_Cuenta">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Estado_de_Cuenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_reporte_semanal">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_reporte_semanal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_datos_nom_fracc">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_datos_nom_fracc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Smza">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Smza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Tipos_de_Credito">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Tipos_de_Credito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Tipos_de_CreditoCC">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Tipos_de_CreditoCC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Datos_Contrato_Nuevo">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Datos_Contrato_Nuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Verifica_Conectividad">
+      <soap:operation soapAction="http://tempuri.org/IService1/Verifica_Conectividad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Ventas_Por_Semana_Entre_Fechas">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Ventas_Por_Semana_Entre_Fechas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Total_Vendido_Ubicado">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Total_Vendido_Ubicado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Total_habitabilidad">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Total_habitabilidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Habitabilidad_Por_Semana_Entre_Fechas">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Habitabilidad_Por_Semana_Entre_Fechas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Ventas_Por_Semana_Entre_Fechas_Barras">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Ventas_Por_Semana_Entre_Fechas_Barras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Firmas_X_Semana_Entre_Fechas">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Firmas_X_Semana_Entre_Fechas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Total_Cancelados_o_SinUbicacion">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Total_Cancelados_o_SinUbicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MyDatos">
+      <soap:operation soapAction="http://tempuri.org/IService1/MyDatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_DatosDetalle_Empleado">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_DatosDetalle_Empleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Comprobar_Notificaciones">
+      <soap:operation soapAction="http://tempuri.org/IService1/Comprobar_Notificaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cambiar_a_Visto_notificacion">
+      <soap:operation soapAction="http://tempuri.org/IService1/Cambiar_a_Visto_notificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Clientes_Activos">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Clientes_Activos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_ultimas_Notificaciones">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_ultimas_Notificaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Asesores_Activos">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Asesores_Activos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_Concepto_Total">
+      <soap:operation soapAction="http://tempuri.org/IService1/Reporte_Concepto_Total" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Reporte_concepto">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Reporte_concepto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarClienteAutoCompletar">
+      <soap:operation soapAction="http://tempuri.org/IService1/buscarClienteAutoCompletar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Datos_Generales_Cliente">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Datos_Generales_Cliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Desgloce_Etapas_Cliente">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Desgloce_Etapas_Cliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelacionCliente">
+      <soap:operation soapAction="http://tempuri.org/IService1/CancelacionCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_usuarios">
+      <soap:operation soapAction="http://tempuri.org/IService1/Inserta_usuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_pro_contratos_nuevo">
+      <soap:operation soapAction="http://tempuri.org/IService1/Inserta_pro_contratos_nuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_pro_contratos_nuevo">
+      <soap:operation soapAction="http://tempuri.org/IService1/Actualiza_pro_contratos_nuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listar_ContratoDatos">
+      <soap:operation soapAction="http://tempuri.org/IService1/Listar_ContratoDatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Elimina_pro_contratos_nuevo">
+      <soap:operation soapAction="http://tempuri.org/IService1/Elimina_pro_contratos_nuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_promociones">
+      <soap:operation soapAction="http://tempuri.org/IService1/Inserta_promociones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_promociones">
+      <soap:operation soapAction="http://tempuri.org/IService1/Actualiza_promociones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Elimina_promociones">
+      <soap:operation soapAction="http://tempuri.org/IService1/Elimina_promociones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listar_Equipamientos">
+      <soap:operation soapAction="http://tempuri.org/IService1/Listar_Equipamientos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Equipamientos">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Equipamientos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Equipamiento">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Equipamiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Datos_Grid_Gerardo">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Datos_Grid_Gerardo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Detalles_comisionID">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Detalles_comisionID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Modifica_Comision">
+      <soap:operation soapAction="http://tempuri.org/IService1/Modifica_Comision" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Nombrecompleto_lider">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Nombrecompleto_lider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Resumen_fraccionamiento">
+      <soap:operation soapAction="http://tempuri.org/IService1/Resumen_fraccionamiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Resumen_asesor_comisiones">
+      <soap:operation soapAction="http://tempuri.org/IService1/Resumen_asesor_comisiones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_pro_contratos_nuevo">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_pro_contratos_nuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Valores_Comisiones">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Valores_Comisiones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_comisiones_porcentajes">
+      <soap:operation soapAction="http://tempuri.org/IService1/Actualiza_comisiones_porcentajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_comisiones_porcentajes">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_comisiones_porcentajes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_esquemas_enkontrol">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_esquemas_enkontrol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_comisiones_clasificaciones">
+      <soap:operation soapAction="http://tempuri.org/IService1/Inserta_comisiones_clasificaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Elimina_comisiones_clasificaciones">
+      <soap:operation soapAction="http://tempuri.org/IService1/Elimina_comisiones_clasificaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_comisiones_clasificaciones">
+      <soap:operation soapAction="http://tempuri.org/IService1/Actualiza_comisiones_clasificaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_comisiones_clasificaciones">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_comisiones_clasificaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_comisiones_clasificacion">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_comisiones_clasificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_comisiones_esquemas">
+      <soap:operation soapAction="http://tempuri.org/IService1/Inserta_comisiones_esquemas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Elimina_comisiones_esquemas">
+      <soap:operation soapAction="http://tempuri.org/IService1/Elimina_comisiones_esquemas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_comisiones_esquemas">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_comisiones_esquemas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_comisiones_esquema">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_comisiones_esquema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Reglas_Comisiones">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Reglas_Comisiones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_comisiones_reglas">
+      <soap:operation soapAction="http://tempuri.org/IService1/Inserta_comisiones_reglas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Elimina_comisiones_reglas">
+      <soap:operation soapAction="http://tempuri.org/IService1/Elimina_comisiones_reglas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_admin">
+      <soap:operation soapAction="http://tempuri.org/IService1/Actualiza_admin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_admin">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_admin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_programacionentrega">
+      <soap:operation soapAction="http://tempuri.org/IService1/Inserta_programacionentrega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Elimina_programacionentrega">
+      <soap:operation soapAction="http://tempuri.org/IService1/Elimina_programacionentrega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualiza_programacionentrega">
+      <soap:operation soapAction="http://tempuri.org/IService1/Actualiza_programacionentrega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_programacionentrega">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_programacionentrega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Nombre_Cliente">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Nombre_Cliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cambia_contratos">
+      <soap:operation soapAction="http://tempuri.org/IService1/Cambia_contratos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_comisionesgerencia">
+      <soap:operation soapAction="http://tempuri.org/IService1/Inserta_comisionesgerencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Elimina_comisionesgerencia">
+      <soap:operation soapAction="http://tempuri.org/IService1/Elimina_comisionesgerencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Elimina_Comision">
+      <soap:operation soapAction="http://tempuri.org/IService1/Elimina_Comision" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_comisionesgerencia">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_comisionesgerencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_promocione">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_promocione" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_Penalizacion">
+      <soap:operation soapAction="http://tempuri.org/IService1/Reporte_Penalizacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_comisiones_cliente">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_comisiones_cliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_datos_cancelaciones">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_datos_cancelaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_programacionEntregaAdm">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_programacionEntregaAdm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_datos_cliente_contrato_fovissste">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_datos_cliente_contrato_fovissste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_cuentaDepodito_Cte">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_cuentaDepodito_Cte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Credito_Porcentaje">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Credito_Porcentaje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_promociones">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_promociones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDSEnkontrol">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerDSEnkontrol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_loteids">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_loteids" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDSSAC">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerDSSAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inserta_reportes_check">
+      <soap:operation soapAction="http://tempuri.org/IService1/Inserta_reportes_check" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTerreno">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerTerreno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_plazosTerrenos">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_plazosTerrenos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_plazoTerreno">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_plazoTerreno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPCRU">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerPCRU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_limite_bonoContrato">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_limite_bonoContrato" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_HabitabilidadLM_BI">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_HabitabilidadLM_BI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_CanceladosLM_BI">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_CanceladosLM_BI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_EscrituradosLM_BI">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_EscrituradosLM_BI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_VentasLM_BI">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_VentasLM_BI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_EscrituradosAcumuladoLM_BI">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_EscrituradosAcumuladoLM_BI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Ingresados_por_semana">
+      <soap:operation soapAction="http://tempuri.org/IService1/Obtener_Ingresados_por_semana" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://192.168.1.17/WCF-ProConsul2/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

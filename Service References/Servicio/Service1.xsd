@@ -1,0 +1,1503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.1.17/WCF-ProConsul2/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" />
+  <xs:import schemaLocation="http://192.168.1.17/WCF-ProConsul2/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://192.168.1.17/WCF-ProConsul2/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="LogIn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogInResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="LogInResult" nillable="true" type="q1:CUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Estado_de_Cuenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fecha_Inicial" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Fecha_Final" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Empleado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Estado_de_CuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Estado_de_CuentaResult" nillable="true" type="q2:ArrayOfCEstadoCuenta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_reporte_semanal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="empleado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_reporte_semanalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_reporte_semanalResult" nillable="true" type="q3:ArrayOfCEstadoCuenta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_datos_nom_fracc">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_datos_nom_fraccResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_datos_nom_fraccResult" nillable="true" type="q4:ArrayOfCDatosFracc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Smza">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_cve_fracc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_SmzaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Obtener_SmzaResult" nillable="true" type="q5:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Tipos_de_Credito">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Tipos_de_CreditoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Tipos_de_CreditoResult" nillable="true" type="q6:ArrayOfCCreditos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Tipos_de_CreditoCC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SM" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Tipos_de_CreditoCCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Tipos_de_CreditoCCResult" nillable="true" type="q7:ArrayOfCCreditos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Datos_Contrato_Nuevo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TC" type="xs:int" />
+        <xs:element minOccurs="0" name="INFONAVIT" type="xs:int" />
+        <xs:element minOccurs="0" name="FOVISSSTE" type="xs:int" />
+        <xs:element minOccurs="0" name="ISSEG" type="xs:int" />
+        <xs:element minOccurs="0" name="Empresa" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Datos_Contrato_NuevoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Datos_Contrato_NuevoResult" nillable="true" type="q8:CDatosContratoNuevo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Verifica_Conectividad">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Verifica_ConectividadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Verifica_ConectividadResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Ventas_Por_Semana_Entre_Fechas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fecha_inicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Fecha_Final" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Ventas_Por_Semana_Entre_FechasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Ventas_Por_Semana_Entre_FechasResult" nillable="true" type="q9:ArrayOfCDatosVentaSemanal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Total_Vendido_Ubicado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fecha_inicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Fecha_Final" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Total_Vendido_UbicadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Obtener_Total_Vendido_UbicadoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Total_habitabilidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fecha_inicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Fecha_Final" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Total_habitabilidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Obtener_Total_habitabilidadResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Habitabilidad_Por_Semana_Entre_Fechas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fecha_inicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Fecha_Final" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Habitabilidad_Por_Semana_Entre_FechasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Habitabilidad_Por_Semana_Entre_FechasResult" nillable="true" type="q10:ArrayOfCDatosVentaSemanal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Ventas_Por_Semana_Entre_Fechas_Barras">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fecha_inicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Fecha_Final" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Ventas_Por_Semana_Entre_Fechas_BarrasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Ventas_Por_Semana_Entre_Fechas_BarrasResult" nillable="true" type="q11:ArrayOfCDatosVentaSemanal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Firmas_X_Semana_Entre_Fechas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fecha_inicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Fecha_Final" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Firmas_X_Semana_Entre_FechasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Firmas_X_Semana_Entre_FechasResult" nillable="true" type="q12:ArrayOfCDatosVentaSemanal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Total_Cancelados_o_SinUbicacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fecha_inicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Fecha_Final" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Total_Cancelados_o_SinUbicacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Obtener_Total_Cancelados_o_SinUbicacionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MyDatos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="empleado" type="xs:int" />
+        <xs:element minOccurs="0" name="FNacimiento" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="SSexo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SNacionalidad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tnacionalidad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SCivil" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbCiudad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbEstado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbDir" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbCelular" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbTel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbEmail" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbRefNom1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbRefParentesco1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbRefTel1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbRefNom2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbRefParentesco2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbRefTel2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbRFC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbCURP" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbIFE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbCIFE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbManejo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FVenceManejo" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="tbNSS" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cbPrimaria" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cbSecundaria" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cbPreparatoria" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cbLicenciatura" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbLicName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cbMaestria" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tbMasName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MyDatosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MyDatosResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_DatosDetalle_Empleado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Empleado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_DatosDetalle_EmpleadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_DatosDetalle_EmpleadoResult" nillable="true" type="q13:CDatosAsesorDetalle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Comprobar_Notificaciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Empleado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Comprobar_NotificacionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Comprobar_NotificacionesResult" nillable="true" type="q14:CNotificaciones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Cambiar_a_Visto_notificacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_notificacion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Cambiar_a_Visto_notificacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Cambiar_a_Visto_notificacionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Clientes_Activos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Empleado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Clientes_ActivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Clientes_ActivosResult" nillable="true" type="q15:ArrayOfCClientesActivos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_ultimas_Notificaciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Empleado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_ultimas_NotificacionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_ultimas_NotificacionesResult" nillable="true" type="q16:ArrayOfCUltimasNotificaciones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Asesores_Activos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Asesores_ActivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Asesores_ActivosResult" nillable="true" type="q17:ArrayOfCAsesoresActivos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Reporte_Concepto_Total">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fecha_inicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Fecha_Final" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Etapa" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Reporte_Concepto_TotalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Reporte_Concepto_TotalResult" nillable="true" type="q18:ArrayOfCReporteMontos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Reporte_concepto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fecha_inicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Fecha_Final" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Etapa" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Reporte_conceptoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Reporte_conceptoResult" nillable="true" type="q19:ArrayOfCreporteConepto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="buscarClienteAutoCompletar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Busqueda" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="buscarClienteAutoCompletarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="buscarClienteAutoCompletarResult" nillable="true" type="q20:ArrayOfCClientesBusqueda" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Datos_Generales_Cliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numcte" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Datos_Generales_ClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Datos_Generales_ClienteResult" nillable="true" type="q21:CGeneralesCliente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Desgloce_Etapas_Cliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numcte" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Desgloce_Etapas_ClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Desgloce_Etapas_ClienteResult" nillable="true" type="q22:ArrayOfCEtapasCliente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelacionCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Numcte" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelacionClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="CancelacionClienteResult" nillable="true" type="q23:CDatosCancelacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inserta_usuarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_tipo" type="xs:int" />
+        <xs:element minOccurs="0" name="nivel" type="xs:int" />
+        <xs:element minOccurs="0" name="Desc_Nombre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inserta_usuariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Inserta_usuariosResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inserta_pro_contratos_nuevo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TC" type="xs:int" />
+        <xs:element minOccurs="0" name="INFONAVIT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FOVISSSTE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ISSEG" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Fecha_DTU" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="CPenalizaPrevio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="CEnganche" type="xs:decimal" />
+        <xs:element minOccurs="0" name="CPenalizaIngresado" type="xs:decimal" />
+        <xs:element minOccurs="0" name="FormatoAdicional2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FormatoAdicional" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PrecioCasa" type="xs:int" />
+        <xs:element minOccurs="0" name="PrecioAdicional" type="xs:int" />
+        <xs:element minOccurs="0" name="Mtr_Casa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Activo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Bono" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inserta_pro_contratos_nuevoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Inserta_pro_contratos_nuevoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualiza_pro_contratos_nuevo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_contrato" type="xs:int" />
+        <xs:element minOccurs="0" name="CC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TC" type="xs:int" />
+        <xs:element minOccurs="0" name="INFONAVIT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FOVISSSTE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ISSEG" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Fecha_DTU" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="CPenalizaPrevio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="CEnganche" type="xs:decimal" />
+        <xs:element minOccurs="0" name="CPenalizaIngresado" type="xs:decimal" />
+        <xs:element minOccurs="0" name="FormatoAdicional2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FormatoAdicional" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PrecioCasa" type="xs:int" />
+        <xs:element minOccurs="0" name="PrecioAdicional" type="xs:int" />
+        <xs:element minOccurs="0" name="Mtr_Casa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Activo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Bono" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualiza_pro_contratos_nuevoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Actualiza_pro_contratos_nuevoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Listar_ContratoDatos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Listar_ContratoDatosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Listar_ContratoDatosResult" nillable="true" type="q24:ArrayOfCDatosContrato" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Elimina_pro_contratos_nuevo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_contrato" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Elimina_pro_contratos_nuevoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Elimina_pro_contratos_nuevoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inserta_promociones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Precio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TextoCombo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TextoContrato" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inserta_promocionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Inserta_promocionesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualiza_promociones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_promocion" type="xs:int" />
+        <xs:element minOccurs="0" name="CC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Precio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TextoCombo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TextoContrato" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualiza_promocionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Actualiza_promocionesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Elimina_promociones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_promocion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Elimina_promocionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Elimina_promocionesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Listar_Equipamientos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Listar_EquipamientosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Listar_EquipamientosResult" nillable="true" type="q25:ArrayOfCEquipamiento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Equipamientos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SM" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_EquipamientosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_EquipamientosResult" nillable="true" type="q26:ArrayOfCEquipamiento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Equipamiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_promocion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_EquipamientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_EquipamientoResult" nillable="true" type="q27:CEquipamiento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Datos_Grid_Gerardo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Datos_Grid_GerardoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Datos_Grid_GerardoResult" nillable="true" type="q28:ArrayOfCReporteGerardoGrid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Detalles_comisionID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_comision" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Detalles_comisionIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Detalles_comisionIDResult" nillable="true" type="q29:CComision" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Modifica_Comision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_comision" type="xs:int" />
+        <xs:element minOccurs="0" name="Cantidad_Pagada_Total" type="xs:int" />
+        <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Modifica_ComisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Modifica_ComisionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Nombrecompleto_lider">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="desc_valor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Nombrecompleto_liderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Nombrecompleto_liderResult" nillable="true" type="q30:CNombreLiderGerente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Resumen_fraccionamiento">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Resumen_fraccionamientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Resumen_fraccionamientoResult" nillable="true" type="q31:ArrayOfCResumenFracc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Resumen_asesor_comisiones">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Resumen_asesor_comisionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Resumen_asesor_comisionesResult" nillable="true" type="q32:ArrayOfCResumenAsesor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_pro_contratos_nuevo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_contrato" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_pro_contratos_nuevoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_pro_contratos_nuevoResult" nillable="true" type="q33:CContratos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Valores_Comisiones">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Valores_ComisionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Valores_ComisionesResult" nillable="true" type="q34:ArrayOfCValoresComisiones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualiza_comisiones_porcentajes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_valor" type="xs:int" />
+        <xs:element minOccurs="0" name="Porcentaje" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualiza_comisiones_porcentajesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Actualiza_comisiones_porcentajesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_comisiones_porcentajes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_porcentaje" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_comisiones_porcentajesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_comisiones_porcentajesResult" nillable="true" type="q35:ArrayOfCValoresComisiones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_esquemas_enkontrol">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_esquemas_enkontrolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_esquemas_enkontrolResult" nillable="true" type="q36:ArrayOfCEsquemas" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inserta_comisiones_clasificaciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DescripcionClasificacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inserta_comisiones_clasificacionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Inserta_comisiones_clasificacionesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Elimina_comisiones_clasificaciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_clasificacion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Elimina_comisiones_clasificacionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Elimina_comisiones_clasificacionesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualiza_comisiones_clasificaciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_clasificacion" type="xs:int" />
+        <xs:element minOccurs="0" name="DescripcionClasificacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualiza_comisiones_clasificacionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Actualiza_comisiones_clasificacionesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_comisiones_clasificaciones">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_comisiones_clasificacionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_comisiones_clasificacionesResult" nillable="true" type="q37:ArrayOfCClasificaciones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_comisiones_clasificacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_clasificacion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_comisiones_clasificacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_comisiones_clasificacionResult" nillable="true" type="q38:CClasificaciones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inserta_comisiones_esquemas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_esquema" type="xs:int" />
+        <xs:element minOccurs="0" name="id_clasificacion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inserta_comisiones_esquemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Inserta_comisiones_esquemasResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Elimina_comisiones_esquemas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_registro" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Elimina_comisiones_esquemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Elimina_comisiones_esquemasResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_comisiones_esquemas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_comisiones_esquemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_comisiones_esquemasResult" nillable="true" type="q39:ArrayOfCEsquemaRegla" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_comisiones_esquema">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_clasificacion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_comisiones_esquemaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_comisiones_esquemaResult" nillable="true" type="q40:ArrayOfCEsquemaRegla" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Reglas_Comisiones">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Reglas_ComisionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Reglas_ComisionesResult" nillable="true" type="q41:ArrayOfCReglasComisiones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inserta_comisiones_reglas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="empleado" type="xs:int" />
+        <xs:element minOccurs="0" name="id_clasificacion" type="xs:int" />
+        <xs:element minOccurs="0" name="etapaFinal" type="xs:int" />
+        <xs:element minOccurs="0" name="Cantidad_PagoUnitario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inserta_comisiones_reglasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Inserta_comisiones_reglasResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Elimina_comisiones_reglas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_regla" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Elimina_comisiones_reglasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Elimina_comisiones_reglasResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualiza_admin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_admin" type="xs:int" />
+        <xs:element minOccurs="0" name="Empleado" type="xs:int" />
+        <xs:element minOccurs="0" name="NombreCompleto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Cantidad" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualiza_adminResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Actualiza_adminResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_admin">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_adminResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_adminResult" nillable="true" type="q42:ArrayOfCAdministrativos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inserta_programacionentrega">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numcte" type="xs:int" />
+        <xs:element xmlns:q43="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="Hora" type="q43:duration" />
+        <xs:element minOccurs="0" name="FECHA" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inserta_programacionentregaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Inserta_programacionentregaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Elimina_programacionentrega">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_programacion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Elimina_programacionentregaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Elimina_programacionentregaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualiza_programacionentrega">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_programacion" type="xs:int" />
+        <xs:element minOccurs="0" name="numcte" type="xs:int" />
+        <xs:element minOccurs="0" name="NombreCliente" nillable="true" type="xs:string" />
+        <xs:element xmlns:q44="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="Hora" type="q44:duration" />
+        <xs:element minOccurs="0" name="FECHA" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualiza_programacionentregaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Actualiza_programacionentregaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_programacionentrega">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_programacionentregaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_programacionentregaResult" nillable="true" type="q45:ArrayOfCProgramacionEntrega" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Nombre_Cliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Numcte" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Nombre_ClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Obtener_Nombre_ClienteResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Cambia_contratos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_contrato" type="xs:int" />
+        <xs:element minOccurs="0" name="Activo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Cambia_contratosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Cambia_contratosResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inserta_comisionesgerencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Cantidad" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inserta_comisionesgerenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Inserta_comisionesgerenciaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Elimina_comisionesgerencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CC" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Elimina_comisionesgerenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Elimina_comisionesgerenciaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Elimina_Comision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_comisione" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Elimina_ComisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Elimina_ComisionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_comisionesgerencia">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_comisionesgerenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_comisionesgerenciaResult" nillable="true" type="q46:ArrayOfCPagosGerencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_promocione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_promocion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_promocioneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_promocioneResult" nillable="true" type="q47:CPromocionesContrato" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Reporte_Penalizacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Reporte_PenalizacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Reporte_PenalizacionResult" nillable="true" type="q48:ArrayOfCPagoyPenalizacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_comisiones_cliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numcte" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_comisiones_clienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_comisiones_clienteResult" nillable="true" type="q49:ArrayOfCComisionesCliente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_datos_cancelaciones">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_datos_cancelacionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_datos_cancelacionesResult" nillable="true" type="q50:ArrayOfCCancelacionesDetalles" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_programacionEntregaAdm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFinal" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_programacionEntregaAdmResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_programacionEntregaAdmResult" nillable="true" type="q51:ArrayOfCProgramacionEntregaAdm" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_datos_cliente_contrato_fovissste">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numcte" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_datos_cliente_contrato_fovisssteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_datos_cliente_contrato_fovisssteResult" nillable="true" type="q52:CDatosClienteContratoFovissste" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_cuentaDepodito_Cte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Numcte" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_cuentaDepodito_CteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Obtener_cuentaDepodito_CteResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Credito_Porcentaje">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Numcte" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Credito_PorcentajeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Obtener_Credito_PorcentajeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_promociones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SM" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_promocionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_promocionesResult" nillable="true" type="q53:ArrayOfCPromocionesContrato" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDSEnkontrol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQL" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDSEnkontrolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerDSEnkontrolResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_loteids">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_loteidsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Obtener_loteidsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDSSAC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SQL" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDSSACResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerDSSACResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inserta_reportes_check">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_categoria" type="xs:int" />
+        <xs:element minOccurs="0" name="id_subcategoria" type="xs:int" />
+        <xs:element minOccurs="0" name="id_subsubcategoria" type="xs:int" />
+        <xs:element minOccurs="0" name="id_subsubsubcategoria" type="xs:int" />
+        <xs:element minOccurs="0" name="id_subsubsubsubcategoria" type="xs:int" />
+        <xs:element minOccurs="0" name="NUMCTE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Observacioens" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fotografia" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Inserta_reportes_checkResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Inserta_reportes_checkResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTerreno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CC" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTerrenoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerTerrenoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_plazosTerrenos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_plazosTerrenosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_plazosTerrenosResult" nillable="true" type="q54:ArrayOfCPlazosTerreno" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_plazoTerreno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_plazo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_plazoTerrenoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_plazoTerrenoResult" nillable="true" type="q55:CPlazosTerreno" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPCRU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="smza" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPCRUResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerPCRUResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_limite_bonoContrato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CC" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_limite_bonoContratoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Obtener_limite_bonoContratoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_HabitabilidadLM_BI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fecha_inicio" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_HabitabilidadLM_BIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_HabitabilidadLM_BIResult" nillable="true" type="q56:ArrayOfCGraficoBI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CanceladosLM_BI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fecha_inicio" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_CanceladosLM_BIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_CanceladosLM_BIResult" nillable="true" type="q57:ArrayOfCGraficoBI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_EscrituradosLM_BI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fecha_inicio" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_EscrituradosLM_BIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_EscrituradosLM_BIResult" nillable="true" type="q58:ArrayOfCGraficoBI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_VentasLM_BI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fecha_inicio" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_VentasLM_BIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_VentasLM_BIResult" nillable="true" type="q59:ArrayOfCGraficoBI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_EscrituradosAcumuladoLM_BI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fecha_inicio" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_EscrituradosAcumuladoLM_BIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_EscrituradosAcumuladoLM_BIResult" nillable="true" type="q60:ArrayOfCGraficoBI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Ingresados_por_semana">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fecha_Inicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Fecha_Final" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Ingresados_por_semanaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/WCF_ProConsul2._0" minOccurs="0" name="Obtener_Ingresados_por_semanaResult" nillable="true" type="q61:ArrayOfCGraficoBI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
